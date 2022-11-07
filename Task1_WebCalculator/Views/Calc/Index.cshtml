@@ -5,7 +5,7 @@
 
 <h1>Simple Calculator</h1>
 <div class="row">
-    @using(Html.BeginForm("Index", "calc", FormMethod.Post)){
+    @using(Html.BeginForm("Index", "Calculator", FormMethod.Post)){
         <div class="col-sm-3">
             <label for="num1">First number</label>
             <input type="text" class="form-control" id="num1" name="num1" value="@Model.num1" pattern="[0-9,]+" />
