@@ -1,0 +1,30 @@
+﻿@model Task1_WebCalculator.Models.Calculator
+@{
+    ViewData["Title"] = "Calculator";
+}
+
+<h1>Simple Calculator</h1>
+<div class="row">
+    @using(Html.BeginForm("Index", "calc", FormMethod.Post)){
+        <div class="col-sm-3">
+            <label for="num1">First number</label>
+            <input type="number" class="form-control" id="num1" name="num1" value="@Model.num1" />
+        </div>
+        <div class="col-sm-3">
+            <label for="num2">Second number</label>
+            <input type="number" class="form-control" id="num2" name="num2" value="@Model.num2" />
+        </div>
+        <p></p>
+        <div>
+            <button type="submit" class="btn btn-dark" id="add" value="add" name="operation">+</button>
+            <button type="submit" class="btn btn-info" id="sub" value="sub" name="operation">-</button>
+            <button type="submit" class="btn btn-warning" id="mul" value="mul" name="operation">*</button>
+            <button type="submit" class="btn btn-danger" id="div" value="div" name="operation">/</button>
+        </div>
+
+        <div class="col-sm-3">
+            <label for="num2">Result</label>
+            <input type="number" class="form-control" id="result" name="result" value="@Model.result" />
+        </div>
+    }
+</div>
