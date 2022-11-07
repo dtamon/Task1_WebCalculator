@@ -13,7 +13,8 @@ namespace Task1_WebCalculator.Controllers
         [HttpPost]
         public IActionResult Index(Calculator c, string operation)
         {
-            if (operation == "add") { 
+            if (operation == "add")
+            {
                 c.result = c.num1 + c.num2;
             } 
             else if (operation == "sub")
