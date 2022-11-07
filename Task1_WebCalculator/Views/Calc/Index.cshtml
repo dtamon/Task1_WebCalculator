@@ -5,14 +5,14 @@
 
 <h1>Simple Calculator</h1>
 <div class="row">
-    @using(Html.BeginForm("Index", "Calculator", FormMethod.Post)){
+    @using(Html.BeginForm("Index", "calc", FormMethod.Post)){
         <div class="col-sm-3">
             <label for="num1">First number</label>
-            <input type="text" class="form-control" step="any" id="num1" name="num1" value="@Model.num1" pattern="[0-9,]+" />
+            <input type="text" class="form-control" id="num1" name="num1" value="@Model.num1" pattern="[0-9,]+" />
         </div>
         <div class="col-sm-3">
             <label for="num2">Second number</label>
-            <input type="text" class="form-control" step="any" id="num2" name="num2" value="@Model.num2" pattern="[0-9,]+"/>
+            <input type="text" class="form-control" id="num2" name="num2" value="@Model.num2" pattern="[0-9,]+"/>
         </div>
         <p></p>
         <div>
@@ -24,7 +24,7 @@
 
         <div class="col-sm-3">
             <label for="num2">Result</label>
-            <input type="text" class="form-control" step="any" id="result" name="result" value="@Model.result" readonly/>
+            <input type="text" class="form-control" id="result" name="result" value="@Model.result" readonly/>
         </div>
     }
 </div>
