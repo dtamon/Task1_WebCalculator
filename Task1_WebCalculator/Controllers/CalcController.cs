@@ -13,6 +13,7 @@ namespace Task1_WebCalculator.Controllers
         [HttpPost]
         public IActionResult Index(Calculator c, string operation)
         {
+            
             if (operation == "add")
             {
                 c.result = c.num1 + c.num2;
@@ -27,10 +28,22 @@ namespace Task1_WebCalculator.Controllers
             }
             else if (operation == "div")
             {
-                c.result = c.num1 / c.num2;
+                if (c.num2 != 0)
+                {
+                    c.result = c.num1 / c.num2;
+                } 
+                else
+                {
+                    ModelState.AddModelError("num2", "Cannot divide by 0");
+                }
+                
             }
 
             return View(c);
+        }
+        public IActionResult Help()
+        {
+            return View();
         }
     }
 }
