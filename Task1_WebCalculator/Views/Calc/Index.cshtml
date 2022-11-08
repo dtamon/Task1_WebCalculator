@@ -8,11 +8,11 @@
     @using(Html.BeginForm("Index", "calc", FormMethod.Post)){
         <div class="col-sm-3">
             <label for="num1">First number</label>
-            <input type="text" class="form-control" id="num1" name="num1" value="@Model.num1" pattern="[0-9,]+" />
+            <input type="text" class="form-control" id="num1" name="num1" value="@Model.num1" pattern="^[-,0-9]+$" />
         </div>
         <div class="col-sm-3">
             <label for="num2">Second number</label>
-            <input type="text" class="form-control" id="num2" name="num2" value="@Model.num2" pattern="[0-9,]+"/>
+            <input type="text" class="form-control" id="num2" name="num2" value="@Model.num2" pattern="^[-,0-9]+$" />
             <span asp-validation-for="num2" class="text-danger"></span>
         </div>
         <p></p>
